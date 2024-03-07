@@ -1,0 +1,15 @@
+<button class="btn btn-primary" (click)="onCreatePassword()">
+  Display Details
+</button>
+<p *ngIf="passwordCreated; else content">{{ password }}</p>
+<ng-template #content>
+  <p>No Secrect</p>
+</ng-template>
+
+<div
+  *ngFor="let number of numberArray; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'red' }"
+  [ngClass]="{ 'white-text': i >= 4 }"
+>
+  {{ number }}
+</div>
